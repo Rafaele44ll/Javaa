@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "frm08",
+            "request": "launch",
+            "mainClass": "secuenciales.frm08",
+            "projectName": "Javaa-1_1678d8c"
+        },
+        {
+            "type": "java",
             "name": "frm07",
             "request": "launch",
             "mainClass": "secuenciales.frm07",
