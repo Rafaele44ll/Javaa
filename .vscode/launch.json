@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "frm01",
+            "request": "launch",
+            "mainClass": "secuenciales.frm01",
+            "projectName": "Javaa-1_1678d8c"
+        }
+    ]
+}
