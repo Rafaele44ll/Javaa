@@ -66,11 +66,9 @@ public class frm11 extends JFrame {
     }
 
     protected void btnIntercambiar_actionPerformed() {
-        // Obtener los números de tres cifras
         int numero1 = Integer.parseInt(txtNumero1.getText());
         int numero2 = Integer.parseInt(txtNumero2.getText());
 
-        // Descomposición en cientos, decenas y unidades
         int cientos1 = numero1 / 100;
         int decenas1 = (numero1 / 10) % 10;
         int unidades1 = numero1 % 10;
@@ -79,11 +77,9 @@ public class frm11 extends JFrame {
         int decenas2 = (numero2 / 10) % 10;
         int unidades2 = numero2 % 10;
 
-        // Intercambio de la primera y tercera cifra
         int resultado1 = cientos2 * 100 + decenas1 * 10 + unidades2;
         int resultado2 = cientos1 * 100 + decenas2 * 10 + unidades1;
 
-        // Mostrar resultados
         txtResultado1.setText(String.valueOf(resultado1));
         txtResultado2.setText(String.valueOf(resultado2));
     }
