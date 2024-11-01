@@ -12,14 +12,12 @@ public class frm10 extends JFrame {
     JTextField txtNumero, txtInverso;
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    frm10 frame = new frm10();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        EventQueue.invokeLater(() -> {
+            try {
+                frm10 frame = new frm10();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }
@@ -66,11 +64,15 @@ public class frm10 extends JFrame {
             int decenas = (numero % 100) / 10;
             int unidades = numero % 10;
 
-            int inverso = unidades * 1000 + decenas * 100 + centenas * 10 + millares;
+            int inverso = (unidades * 1000) + (decenas * 100) + (centenas * 10) + millares;
 
-            txtInverso.setText(String.valueOf(inverso));
+            mostrarInversoEnCampo(inverso);
         } catch (NumberFormatException e) {
             txtInverso.setText("Error");
         }
+    }
+
+    private void mostrarInversoEnCampo(int numero) {
+        txtInverso.setText("" + numero);
     }
 }
