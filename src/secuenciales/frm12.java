@@ -74,7 +74,6 @@ public class frm12 extends JFrame {
         double raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
         double raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
 
-        // Usar JOptionPane para mostrar los resultados
         JOptionPane.showMessageDialog(this, "Raíz 1: " + raiz1 + "\nRaíz 2: " + raiz2,
                 "Resultados", JOptionPane.INFORMATION_MESSAGE);
     }

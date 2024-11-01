@@ -81,7 +81,7 @@ public class frm11 extends JFrame {
         int resultado1 = cientos2 * 100 + decenas1 * 10 + unidades2;
         int resultado2 = cientos1 * 100 + decenas2 * 10 + unidades1;
 
-        txtResultado1.setText(String.valueOf(resultado1));
-        txtResultado2.setText(String.valueOf(resultado2));
+        txtResultado1.setText("" + resultado1);
+        txtResultado2.setText("" + resultado2);
     }
 }
