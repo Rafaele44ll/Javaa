@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "frm37",
+            "request": "launch",
+            "mainClass": "condicionales.frm37",
+            "projectName": "Javaa-1_1678d8c"
+        },
+        {
+            "type": "java",
             "name": "frm36",
             "request": "launch",
             "mainClass": "condicionales.frm36",
