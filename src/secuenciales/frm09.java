@@ -1,7 +1,6 @@
 package secuenciales;
 
 import java.awt.EventQueue;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -69,7 +68,7 @@ public class frm09 extends JFrame {
 
             int suma = millares + centenas + decenas + unidades;
 
-            txtSuma.setText(String.valueOf(suma));
+            txtSuma.setText(Double.toString(suma));
         } catch (NumberFormatException e) {
             txtSuma.setText("Error");
         }
