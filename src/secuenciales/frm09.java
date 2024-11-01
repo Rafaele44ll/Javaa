@@ -25,6 +25,7 @@ public class frm09 extends JFrame {
         });
     }
 
+    @SuppressWarnings("unused")
     public frm09() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(0, 0, 350, 250);
