@@ -1,6 +1,7 @@
 package secuenciales;
 
 import java.awt.EventQueue;
+import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -9,7 +10,8 @@ import javax.swing.SwingConstants;
 
 public class frm13 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtCatetoA, txtCatetoB, txtHipotenusa;
+    JTextField txtCatetoA, txtCatetoB;
+    JLabel lblHipotenusa;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -51,11 +53,10 @@ public class frm13 extends JFrame {
         btnCalcular.setBounds(50, 130, 200, 30);
         getContentPane().add(btnCalcular);
 
-        txtHipotenusa = new JTextField();
-        txtHipotenusa.setBounds(50, 180, 200, 30);
-        txtHipotenusa.setEditable(false);
-        txtHipotenusa.setHorizontalAlignment(SwingConstants.CENTER);
-        getContentPane().add(txtHipotenusa);
+        lblHipotenusa = new JLabel();
+        lblHipotenusa.setBounds(50, 180, 200, 30);
+        lblHipotenusa.setHorizontalAlignment(SwingConstants.CENTER);
+        getContentPane().add(lblHipotenusa);
 
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
     }
@@ -66,6 +67,7 @@ public class frm13 extends JFrame {
 
         double hipotenusa = Math.sqrt(catetoA * catetoA + catetoB * catetoB);
 
-        txtHipotenusa.setText(String.valueOf(hipotenusa));
+        DecimalFormat df = new DecimalFormat("#.##");
+        lblHipotenusa.setText(df.format(hipotenusa));
     }
 }
