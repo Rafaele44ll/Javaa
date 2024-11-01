@@ -6,10 +6,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.JOptionPane;
 
 public class frm12 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtA, txtB, txtC, txtResultado1, txtResultado2;
+    JTextField txtA, txtB, txtC;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -60,18 +61,6 @@ public class frm12 extends JFrame {
         btnCalcular.setBounds(100, 180, 130, 30);
         getContentPane().add(btnCalcular);
 
-        txtResultado1 = new JTextField();
-        txtResultado1.setBounds(50, 220, 130, 30);
-        txtResultado1.setEditable(false);
-        txtResultado1.setHorizontalAlignment(SwingConstants.CENTER);
-        getContentPane().add(txtResultado1);
-
-        txtResultado2 = new JTextField();
-        txtResultado2.setBounds(200, 220, 130, 30);
-        txtResultado2.setEditable(false);
-        txtResultado2.setHorizontalAlignment(SwingConstants.CENTER);
-        getContentPane().add(txtResultado2);
-
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
     }
 
@@ -85,7 +74,8 @@ public class frm12 extends JFrame {
         double raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
         double raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
 
-        txtResultado1.setText(String.valueOf(raiz1));
-        txtResultado2.setText(String.valueOf(raiz2));
+        // Usar JOptionPane para mostrar los resultados
+        JOptionPane.showMessageDialog(this, "Raíz 1: " + raiz1 + "\nRaíz 2: " + raiz2,
+                "Resultados", JOptionPane.INFORMATION_MESSAGE);
     }
 }
