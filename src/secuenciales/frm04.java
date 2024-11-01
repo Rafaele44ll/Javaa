@@ -26,6 +26,7 @@ public class frm04 extends JFrame {
         });
     }
 
+    @SuppressWarnings("unused")
     public frm04() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(0, 0, 300, 300);

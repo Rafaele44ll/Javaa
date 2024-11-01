@@ -82,7 +82,6 @@ public class frm05 extends JFrame {
         try {
             int gigabytes = Integer.parseInt(txtGigabytes.getText());
 
-            // Conversión a megabytes, kilobytes y bytes
             long megabytes = gigabytes * 1024;
             long kilobytes = megabytes * 1024;
             long bytes = kilobytes * 1024;
@@ -92,7 +91,6 @@ public class frm05 extends JFrame {
             txtKilobytes.setText(df.format(kilobytes));
             txtBytes.setText(df.format(bytes));
         } catch (NumberFormatException e) {
-            // Manejo de errores de entrada
             txtMegabytes.setText("Error");
             txtKilobytes.setText("Error");
             txtBytes.setText("Error");
