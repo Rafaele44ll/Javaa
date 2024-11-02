@@ -36,10 +36,10 @@ public class frm13 extends JFrame {
         txtEntrada.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtEntrada);
 
-        JButton btnVerificar = new JButton("Verificar Primo");
-        btnVerificar.setBounds(20, 60, 150, 30);
-        btnVerificar.addActionListener(e -> verificarPrimo());
-        getContentPane().add(btnVerificar);
+        JButton btnCalcular = new JButton("Calcular Suma");
+        btnCalcular.setBounds(20, 60, 150, 30);
+        btnCalcular.addActionListener(e -> calcularSuma());
+        getContentPane().add(btnCalcular);
 
         txtResultado = new JTextField();
         txtResultado.setBounds(20, 100, 240, 30);
@@ -48,21 +48,22 @@ public class frm13 extends JFrame {
         getContentPane().add(txtResultado);
     }
 
-    protected void verificarPrimo() {
+    protected void calcularSuma() {
         String entrada = txtEntrada.getText();
-        int numero = Integer.parseInt(entrada);
-        boolean esPrimo = esPrimo(numero);
-        txtResultado.setText(numero + (esPrimo ? " es primo." : " no es primo."));
+        int n = Integer.parseInt(entrada);
+        int suma = sumaMultiplo3No5(n);
+        txtResultado.setText("Suma: " + suma);
     }
 
-    protected boolean esPrimo(int numero) {
-        if (numero <= 1)
-            return false;
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
-            if (numero % i == 0) {
-                return false;
+    protected int sumaMultiplo3No5(int n) {
+        int suma = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 != 0) {
+                suma += i;
             }
         }
-        return true;
+
+        return suma;
     }
 }
