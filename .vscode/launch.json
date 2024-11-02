@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "frm16",
+            "request": "launch",
+            "mainClass": "repetitivos.frm16",
+            "projectName": "Javaa-1_1678d8c"
+        },
+        {
+            "type": "java",
+            "name": "frm12",
+            "request": "launch",
+            "mainClass": "repetitivos.frm12",
+            "projectName": "Javaa-1_1678d8c"
+        },
+        {
+            "type": "java",
             "name": "frm11",
             "request": "launch",
             "mainClass": "repetitivos.frm11",
